@@ -1,0 +1,92 @@
+/* =============================================================
+   pages/home.css — Homepage-specific styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO — mobile poster default hidden (shown on mobile only)
+   hero.css sets display:block inside the ≤768px media query;
+   this rule ensures it stays hidden on desktop.
+   ------------------------------------------------------------- */
+.hero__poster--mobile-hero {
+  display: none;
+}
+
+
+/* -------------------------------------------------------------
+   TOP 3 ISSUES SECTION
+   ------------------------------------------------------------- */
+.issues-section {
+  background-color: var(--light-bg);
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--lg);
+  margin-top: var(--xl);
+}
+
+@media (max-width: 1024px) {
+  .issues-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   ABOUT PREVIEW SECTION
+   ------------------------------------------------------------- */
+.about-preview {
+  background-color: var(--white);
+}
+
+.about-preview__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-preview__text h2 {
+  margin-bottom: var(--lg);
+}
+
+.about-preview__text p {
+  color: var(--body-text);
+}
+
+
+/* -------------------------------------------------------------
+   COMMUNITY SNAPSHOT SECTION
+   bg-navy class is added in HTML so components.css selectors
+   .bg-navy .section-header h2 and .bg-navy .section-header
+   .section-intro handle the white text overrides automatically.
+   ------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+   VOLUNTEER / DONATE SPLIT
+   ------------------------------------------------------------- */
+.home-split-cta {
+  /* inherits .split-cta from components.css */
+}
+
+
+/* -------------------------------------------------------------
+   UPCOMING EVENTS STRIP
+   ------------------------------------------------------------- */
+.home-events {
+  background-color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   INSTAGRAM PLACEHOLDER
+   ------------------------------------------------------------- */
+.home-instagram {
+  background-color: var(--light-bg);
+}

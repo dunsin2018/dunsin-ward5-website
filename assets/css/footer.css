@@ -1,0 +1,266 @@
+/* =============================================================
+   footer.css — Site Footer
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   FOOTER SHELL
+   ------------------------------------------------------------- */
+.footer {
+  background-color: var(--navy);
+  border-top: 4px solid var(--teal);
+  border-bottom: 4px solid var(--gold);
+  color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   MAIN FOOTER BODY
+   ------------------------------------------------------------- */
+.footer__main {
+  padding: var(--2xl) 0 var(--xl);
+}
+
+
+/* -------------------------------------------------------------
+   BRAND ROW — headshot + name + slogan
+   ------------------------------------------------------------- */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--lg);
+  margin-bottom: var(--2xl);
+  padding-bottom: var(--xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.footer__headshot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--teal);
+  flex-shrink: 0;
+}
+
+.footer__candidate {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer__slogan {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.60);
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* -------------------------------------------------------------
+   5-COLUMN LINK GRID
+   ------------------------------------------------------------- */
+.footer__columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--xl);
+}
+
+.footer__col-title {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--md);
+}
+
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__col ul li a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color var(--transition);
+  line-height: 1.4;
+}
+
+.footer__col ul li a:hover {
+  color: var(--white);
+}
+
+.footer__col ul li a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+  color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   TEAL HASHTAG BAR
+   ------------------------------------------------------------- */
+.footer__hashtag-bar {
+  background-color: var(--teal);
+  padding: 14px 0;
+}
+
+.footer__hashtag-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--md);
+  flex-wrap: wrap;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.footer__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-head);
+}
+
+.footer__divider {
+  color: rgba(255, 255, 255, 0.40);
+}
+
+.footer__vote {
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   LEGAL BAR
+   ------------------------------------------------------------- */
+.footer__legal-bar {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: var(--md) 0;
+}
+
+.footer__legal-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--md);
+  flex-wrap: wrap;
+}
+
+.footer__legal-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer__legal-links {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer__legal-links a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer__legal-links a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer__columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--lg);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer__main {
+    padding: var(--xl) 0 var(--lg);
+  }
+
+  .footer__brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--md);
+    margin-bottom: var(--xl);
+    padding-bottom: var(--lg);
+  }
+
+  .footer__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--lg);
+  }
+
+  .footer__hashtag-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sm);
+  }
+
+  .footer__legal-bar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__columns {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--md);
+  }
+
+  .footer__social {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

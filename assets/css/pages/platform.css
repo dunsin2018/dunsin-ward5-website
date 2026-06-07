@@ -1,0 +1,242 @@
+/* =============================================================
+   pages/platform.css — Platform page-specific styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------- */
+.hero--platform {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--platform {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   HERO TITLE ROW — small headshot-navy.png beside H1
+   ------------------------------------------------------------- */
+.platform-hero__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lg);
+  margin-bottom: var(--md);
+}
+
+.platform-hero__headshot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.platform-hero__title-row .hero__title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .platform-hero__title-row {
+    flex-direction: column;
+    gap: var(--md);
+  }
+}
+
+
+/* -------------------------------------------------------------
+   INITIATIVES SECTION
+   ------------------------------------------------------------- */
+.initiatives-section {
+  background-color: var(--light-bg);
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--xl);
+  margin-top: var(--xl);
+}
+
+@media (max-width: 1024px) {
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   INITIATIVE CARD
+   ------------------------------------------------------------- */
+.initiative-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+  border-top: 4px solid var(--teal);
+}
+
+.initiative-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+}
+
+.initiative-card__badge {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 1;
+  min-width: 64px;
+}
+
+.initiative-card__icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.initiative-card__title {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.initiative-card__stat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm);
+}
+
+.initiative-card__problem {
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.70;
+  margin: 0;
+}
+
+.initiative-card__actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.initiative-card__actions li {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.55;
+  padding-left: 20px;
+  position: relative;
+}
+
+.initiative-card__actions li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 12px;
+  top: 2px;
+}
+
+/* "Why this matters" callout box */
+.initiative-card__callout {
+  background-color: var(--ltteal);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+  padding: var(--md) var(--lg);
+  margin-top: var(--sm);
+}
+
+.initiative-card__callout-label {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+.initiative-card__callout p:last-child {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.60;
+  margin: 0;
+}
+
+
+/* -------------------------------------------------------------
+   CTA STRIP
+   ------------------------------------------------------------- */
+.cta-strip {
+  padding: var(--2xl) 0;
+}
+
+.cta-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--xl);
+}
+
+.cta-strip__title {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--sm);
+}
+
+.cta-strip__sub {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0;
+}
+
+.cta-strip__actions {
+  display: flex;
+  gap: var(--md);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .cta-strip__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-strip__sub {
+    max-width: 100%;
+  }
+
+  .cta-strip__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-strip__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

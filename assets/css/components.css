@@ -1,0 +1,1182 @@
+/* =============================================================
+   components.css — Shared UI Components
+   Used across multiple pages
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   SECTION HEADERS — label + heading + optional subtext
+   ------------------------------------------------------------- */
+.section-header {
+  margin-bottom: var(--2xl);
+}
+
+.section-header--center {
+  text-align: center;
+}
+
+.section-header .label {
+  margin-bottom: var(--sm);
+}
+
+.section-header h2 {
+  margin-bottom: var(--md);
+}
+
+.section-header .section-intro {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.section-header--center .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section headers on dark backgrounds */
+.bg-navy .section-header h2,
+.bg-navy .section-header .h2 {
+  color: var(--white);
+}
+
+.bg-navy .section-header .section-intro {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+/* -------------------------------------------------------------
+   ISSUE CARDS / INITIATIVE CARDS — teal left border
+   ------------------------------------------------------------- */
+.issue-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  border-left: 4px solid var(--teal);
+  padding: var(--xl);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.issue-card:hover {
+  box-shadow: 0 8px 32px rgba(12, 35, 64, 0.14);
+  transform: translateY(-2px);
+}
+
+.issue-card__number {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--teal);
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: var(--sm);
+}
+
+.issue-card__title {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--md);
+  line-height: 1.3;
+}
+
+.issue-card__body {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: var(--md);
+}
+
+.issue-card__stat {
+  margin-top: var(--md);
+}
+
+
+/* -------------------------------------------------------------
+   THREE-WAYS / FEATURE CARDS
+   ------------------------------------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--lg);
+}
+
+.feature-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  padding: var(--xl);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 28px rgba(12, 35, 64, 0.14);
+  transform: translateY(-3px);
+}
+
+.feature-card__icon {
+  font-size: 36px;
+  margin-bottom: var(--md);
+  display: block;
+}
+
+.feature-card__title {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--sm);
+}
+
+.feature-card__body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+
+/* -------------------------------------------------------------
+   CREDENTIALS GRID — 4 cards (About page)
+   ------------------------------------------------------------- */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--lg);
+}
+
+.credential-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  padding: var(--xl);
+  box-shadow: var(--shadow-card);
+}
+
+.credential-card__icon {
+  font-size: 28px;
+  margin-bottom: var(--md);
+  display: block;
+}
+
+.credential-card__title {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--md);
+}
+
+.credential-card--gold .credential-card__title {
+  color: var(--gold);
+}
+
+.credential-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.credential-card ul li {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.credential-card ul li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.credential-card--gold ul li::before {
+  color: var(--gold);
+}
+
+
+/* -------------------------------------------------------------
+   PULL QUOTE
+   ------------------------------------------------------------- */
+.pull-quote {
+  background-color: var(--teal);
+  padding: var(--2xl) 0;
+  text-align: center;
+}
+
+.pull-quote__text {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.35;
+  max-width: 780px;
+  margin: 0 auto var(--md);
+  font-style: italic;
+}
+
+.pull-quote__attribution {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.70);
+  margin: 0;
+}
+
+
+/* -------------------------------------------------------------
+   CAREER TIMELINE
+   ------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--gold));
+  border-radius: 1px;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: var(--lg);
+  padding-bottom: var(--lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline__item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--teal);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--teal);
+}
+
+.timeline__item:last-child .timeline__dot {
+  background-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.timeline__year {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.timeline__role {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.timeline__org {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+
+/* -------------------------------------------------------------
+   STATS BAR
+   ------------------------------------------------------------- */
+.stats-bar {
+  background-color: var(--navy);
+  padding: var(--2xl) 0;
+}
+
+.stats-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--xl);
+  text-align: center;
+}
+
+.stats-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sm);
+}
+
+.stats-bar__number {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 1;
+}
+
+.stats-bar__label {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 180px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+/* -------------------------------------------------------------
+   VOLUNTEER / DONATE SPLIT SECTION
+   ------------------------------------------------------------- */
+.split-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.split-cta__panel {
+  padding: var(--2xl) var(--xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--lg);
+}
+
+.split-cta__panel--teal {
+  background-color: var(--teal);
+}
+
+.split-cta__panel--navy {
+  background-color: var(--navy);
+}
+
+.split-cta__title {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.split-cta__body {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 320px;
+}
+
+
+/* -------------------------------------------------------------
+   EVENTS STRIP — homepage upcoming events
+   ------------------------------------------------------------- */
+.events-strip {
+  background-color: var(--white);
+  padding: var(--2xl) 0;
+}
+
+.events-strip__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 2px solid var(--teal);
+}
+
+.events-strip__item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: var(--xl);
+  padding: var(--lg) 0;
+  border-bottom: 1px solid var(--border);
+  transition: background-color var(--transition);
+}
+
+.events-strip__item:hover {
+  background-color: var(--light-bg);
+}
+
+.events-strip__date {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.events-strip__name {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+
+/* -------------------------------------------------------------
+   INSTAGRAM / SOCIAL FEED PLACEHOLDER
+   ------------------------------------------------------------- */
+.instagram-section {
+  background-color: var(--light-bg);
+  padding: var(--2xl) 0;
+  text-align: center;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sm);
+  margin: var(--xl) 0;
+}
+
+.instagram-grid__item {
+  aspect-ratio: 1;
+  background-color: var(--ltblue);
+  border-radius: var(--radius-btn);
+  overflow: hidden;
+  position: relative;
+}
+
+.instagram-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instagram-grid__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--ltblue), var(--ltteal));
+  color: var(--muted);
+  font-size: 24px;
+}
+
+.instagram-handle {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  margin-bottom: var(--lg);
+}
+
+
+/* -------------------------------------------------------------
+   COMMUNITY SNAPSHOT — homepage preview grid
+   ------------------------------------------------------------- */
+.community-snapshot {
+  background-color: var(--navy);
+  padding: var(--3xl) 0;
+}
+
+.community-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--md);
+  margin: var(--xl) 0;
+}
+
+.community-preview-grid__item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-btn);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+.community-preview-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.community-preview-grid__item:hover img {
+  transform: scale(1.04);
+}
+
+.community-preview-grid__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 110, 86, 0.85) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--md);
+}
+
+.community-preview-grid__item:hover .community-preview-grid__overlay {
+  opacity: 1;
+}
+
+.community-preview-grid__caption {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+/* Placeholder when no event photos yet */
+.community-preview-grid__placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-btn);
+  color: rgba(255, 255, 255, 0.30);
+  font-size: 14px;
+}
+
+
+/* -------------------------------------------------------------
+   VALUE PILLS
+   ------------------------------------------------------------- */
+.value-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm);
+  margin-top: var(--lg);
+}
+
+.value-pill {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: var(--ltteal);
+  color: var(--teal);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* -------------------------------------------------------------
+   PHASE BLOCKS — First 100 Days
+   ------------------------------------------------------------- */
+.phase-grid {
+  display: grid;
+  gap: var(--xl);
+}
+
+.phase-block {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--xl);
+  position: relative;
+  border-left: 4px solid var(--teal);
+}
+
+.phase-block__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sm);
+  margin-bottom: var(--lg);
+}
+
+.phase-block__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--gold);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.phase-block__date-label {
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.phase-block__title {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--lg);
+}
+
+.phase-block__actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.phase-block__actions li {
+  font-size: 16px;
+  color: var(--body-text);
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+}
+
+.phase-block__actions li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+
+/* -------------------------------------------------------------
+   TWO-COLUMN CONTENT SECTION (bio, about preview, etc.)
+   ------------------------------------------------------------- */
+.two-col-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--2xl);
+  align-items: center;
+}
+
+.two-col-section--60-40 {
+  grid-template-columns: 60% 40%;
+}
+
+.two-col-section--40-60 {
+  grid-template-columns: 40% 60%;
+}
+
+.two-col-section__image {
+  position: relative;
+}
+
+.two-col-section__photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-card);
+  border-left: 4px solid var(--teal);
+  object-fit: cover;
+  display: block;
+}
+
+.two-col-section__photo--warm {
+  box-shadow: 0 12px 40px rgba(12, 35, 64, 0.12);
+}
+
+
+/* -------------------------------------------------------------
+   PILLARS BAR — Platform page
+   ------------------------------------------------------------- */
+.pillars-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pillar {
+  padding: var(--xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sm);
+}
+
+.pillar--teal { background-color: var(--teal); }
+.pillar--navy { background-color: var(--navy); }
+.pillar--gold { background-color: var(--gold); }
+
+.pillar__number {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.pillar__title {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+}
+
+
+/* -------------------------------------------------------------
+   IMPACT AMOUNTS — Donate page
+   ------------------------------------------------------------- */
+.impact-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md);
+  margin: var(--lg) 0;
+}
+
+.amount-btn {
+  padding: 14px 24px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-btn);
+  background: var(--white);
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all var(--transition);
+  min-width: 90px;
+  text-align: center;
+}
+
+.amount-btn:hover,
+.amount-btn.selected {
+  border-color: var(--teal);
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.amount-btn__impact {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: inherit;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+
+/* -------------------------------------------------------------
+   LEGAL DISCLAIMER BOX — Donate page
+   ------------------------------------------------------------- */
+.legal-disclaimer {
+  background-color: #fff8e6;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-card);
+  padding: var(--xl);
+  margin-bottom: var(--2xl);
+}
+
+.legal-disclaimer__title {
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: #7a5900;
+  margin-bottom: var(--md);
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+}
+
+.legal-disclaimer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-disclaimer ul li {
+  font-size: 15px;
+  color: var(--body-text);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.legal-disclaimer ul li::before {
+  content: '•';
+  position: absolute;
+  left: 4px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+
+/* -------------------------------------------------------------
+   HOW TO DONATE SECTION
+   ------------------------------------------------------------- */
+.donate-methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+}
+
+.donate-method {
+  display: flex;
+  gap: var(--md);
+  align-items: flex-start;
+  padding: var(--lg);
+  background-color: var(--light-bg);
+  border-radius: var(--radius-card);
+}
+
+.donate-method__icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.donate-method__label {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.donate-method__detail {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* -------------------------------------------------------------
+   CONTACT DETAILS PANEL
+   ------------------------------------------------------------- */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+}
+
+.contact-detail {
+  display: flex;
+  gap: var(--md);
+  align-items: flex-start;
+}
+
+.contact-detail__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 28px;
+  text-align: center;
+}
+
+.contact-detail__label {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.contact-detail__value {
+  font-size: 16px;
+  color: var(--body-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-detail__value a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.contact-detail__value a:hover {
+  text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------
+   MEDIA DOWNLOAD LIST
+   ------------------------------------------------------------- */
+.media-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm);
+}
+
+.media-download-link {
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+  padding: var(--md) var(--lg);
+  background-color: var(--light-bg);
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.media-download-link:hover {
+  background-color: var(--ltteal);
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.media-download-link__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+/* -------------------------------------------------------------
+   CALL TO ACTION STRIP — community page bottom
+   ------------------------------------------------------------- */
+.cta-strip {
+  background-color: var(--teal);
+  padding: var(--2xl) 0;
+  text-align: center;
+}
+
+.cta-strip h3 {
+  color: var(--white);
+  font-size: clamp(22px, 3vw, 30px);
+  margin-bottom: var(--md);
+}
+
+.cta-strip p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
+  max-width: 540px;
+  margin: 0 auto var(--xl);
+  line-height: 1.65;
+}
+
+
+/* -------------------------------------------------------------
+   THREE WAYS (Get Involved)
+   ------------------------------------------------------------- */
+.three-ways {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--lg);
+  margin-top: var(--2xl);
+}
+
+.way-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  border-top: 4px solid var(--teal);
+  padding: var(--xl);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.way-card__icon {
+  font-size: 40px;
+  margin-bottom: var(--md);
+  display: block;
+}
+
+.way-card__title {
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--sm);
+}
+
+.way-card__body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: var(--lg);
+}
+
+
+/* -------------------------------------------------------------
+   LAWN SIGN MODAL
+   ------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(12, 35, 64, 0.80);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--md);
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: var(--2xl);
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(12, 35, 64, 0.40);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--md);
+  right: var(--md);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--muted);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.modal__close:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.modal__title {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--md);
+}
+
+.modal__subtitle {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: var(--xl);
+}
+
+
+/* -------------------------------------------------------------
+   RESPONSIVE — COMPONENTS
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--lg);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .two-col-section,
+  .two-col-section--60-40,
+  .two-col-section--40-60 {
+    grid-template-columns: 1fr;
+  }
+
+  .split-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .pillars-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .three-ways {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events-strip__item {
+    grid-template-columns: 1fr;
+    gap: var(--xs);
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-amounts {
+    gap: var(--sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-bar__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .community-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

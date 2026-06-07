@@ -1,0 +1,94 @@
+/* =============================================================
+   pages/about.css — About page-specific styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------- */
+.hero--about {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--about {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   BIO SECTION
+   ------------------------------------------------------------- */
+.bio-section {
+  background-color: var(--white);
+}
+
+.bio-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--lg);
+}
+
+.bio-text p {
+  color: var(--body-text);
+  line-height: 1.75;
+  margin: 0;
+}
+
+
+/* -------------------------------------------------------------
+   MY VALUES SECTION
+   ------------------------------------------------------------- */
+.values-section {
+  background-color: var(--light-bg);
+}
+
+.values-block {
+  border-left: 4px solid var(--teal);
+  padding-left: var(--xl);
+  max-width: 820px;
+}
+
+.values-block .label {
+  display: block;
+  margin-bottom: var(--sm);
+}
+
+.values-block h2 {
+  margin-bottom: var(--lg);
+}
+
+.values-block p {
+  color: var(--body-text);
+  line-height: 1.75;
+  margin-bottom: var(--md);
+}
+
+.values-block p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .values-block {
+    padding-left: var(--lg);
+  }
+}
+
+
+/* -------------------------------------------------------------
+   CREDENTIALS SECTION
+   ------------------------------------------------------------- */
+.credentials-section {
+  background-color: var(--light-bg);
+}
+
+
+/* -------------------------------------------------------------
+   TIMELINE SECTION
+   ------------------------------------------------------------- */
+.timeline-section {
+  background-color: var(--white);
+}

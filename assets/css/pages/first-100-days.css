@@ -1,0 +1,170 @@
+/* =============================================================
+   pages/first-100-days.css — First 100 Days page styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO — taller than standard inner page to accommodate two-col
+   ------------------------------------------------------------- */
+.hero--f100 {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--f100 {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   PHASES SECTION
+   ------------------------------------------------------------- */
+.f100-phases-section {
+  background-color: var(--light-bg);
+}
+
+
+/* -------------------------------------------------------------
+   VERTICAL TIMELINE LAYOUT
+   ------------------------------------------------------------- */
+.f100-timeline {
+  max-width: 760px;
+  margin: var(--xl) auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.f100-timeline__item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--lg);
+  align-items: flex-start;
+}
+
+/* Left marker column — dot + connecting line */
+.f100-timeline__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* shift down so dot sits beside the phase-block__badge */
+  padding-top: calc(var(--xl) + 8px);
+}
+
+.f100-timeline__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  border: 3px solid var(--light-bg);
+  box-shadow: 0 0 0 2px var(--gold);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.f100-timeline__dot--final {
+  background-color: var(--teal);
+  box-shadow: 0 0 0 2px var(--teal);
+}
+
+.f100-timeline__line {
+  width: 2px;
+  flex: 1;
+  min-height: var(--2xl);
+  background: linear-gradient(to bottom, var(--gold), var(--teal));
+  margin-top: 4px;
+}
+
+/* Right content column — reuses phase-block from components.css */
+.f100-timeline__item .phase-block {
+  margin-bottom: var(--xl);
+}
+
+.f100-timeline__item:last-child .phase-block {
+  margin-bottom: 0;
+}
+
+
+/* -------------------------------------------------------------
+   RESPONSIVE — stack on mobile, hide timeline markers
+   ------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .f100-timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .f100-timeline__connector {
+    display: none;
+  }
+
+  .f100-timeline__item .phase-block {
+    margin-bottom: var(--lg);
+  }
+}
+
+
+/* -------------------------------------------------------------
+   CTA SECTION
+   ------------------------------------------------------------- */
+.f100-cta-section {
+  background-color: var(--white);
+}
+
+.f100-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--xl);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: var(--xl);
+  background-color: var(--light-bg);
+  border-radius: var(--radius-card);
+  border-left: 4px solid var(--teal);
+}
+
+.f100-cta-title {
+  font-family: var(--font-head);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--sm);
+}
+
+.f100-cta-sub {
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0;
+}
+
+.f100-cta-actions {
+  display: flex;
+  gap: var(--md);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .f100-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--lg);
+  }
+
+  .f100-cta-sub {
+    max-width: 100%;
+  }
+
+  .f100-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .f100-cta-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

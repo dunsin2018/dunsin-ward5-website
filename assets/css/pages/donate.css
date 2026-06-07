@@ -1,0 +1,119 @@
+/* =============================================================
+   pages/donate.css — Donate page styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------- */
+.hero--donate {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--donate {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   DONATE MAIN SECTION
+   ------------------------------------------------------------- */
+.donate-main-section {
+  background-color: var(--light-bg);
+}
+
+
+/* -------------------------------------------------------------
+   TWO-COLUMN LAYOUT — amounts left, form right
+   ------------------------------------------------------------- */
+.donate-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--2xl);
+  align-items: flex-start;
+  margin-top: var(--xl);
+}
+
+@media (max-width: 1024px) {
+  .donate-two-col {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   SECTION TITLES within donate columns
+   ------------------------------------------------------------- */
+.donate-section-title {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--lg);
+}
+
+.donate-section-title--h3 {
+  font-size: 20px;
+  margin-bottom: var(--md);
+}
+
+.donate-form-note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: var(--lg);
+  padding: var(--md) var(--lg);
+  background-color: var(--ltteal);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+}
+
+
+/* -------------------------------------------------------------
+   CHECKBOX / RADIO (shared with get-involved)
+   ------------------------------------------------------------- */
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.4;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--teal);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-radio-row {
+  display: flex;
+  gap: var(--lg);
+  flex-wrap: wrap;
+  margin-top: var(--sm);
+}
+
+.form-privacy {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: var(--sm);
+  margin-bottom: 0;
+}

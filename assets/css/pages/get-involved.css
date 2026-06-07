@@ -1,0 +1,91 @@
+/* =============================================================
+   pages/get-involved.css — Get Involved page styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------- */
+.hero--get-involved {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--get-involved {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   THREE WAYS SECTION
+   ------------------------------------------------------------- */
+.gi-ways-section {
+  background-color: var(--light-bg);
+}
+
+
+/* -------------------------------------------------------------
+   VOLUNTEER FORM SECTION
+   ------------------------------------------------------------- */
+.gi-form-section {
+  background-color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   CHECKBOX GRID — 2 columns for the 8 volunteer options
+   ------------------------------------------------------------- */
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sm) var(--lg);
+  margin-top: var(--sm);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.4;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--teal);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-radio-row {
+  display: flex;
+  gap: var(--lg);
+  flex-wrap: wrap;
+  margin-top: var(--sm);
+}
+
+.form-privacy {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: var(--sm);
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .form-check-grid {
+    grid-template-columns: 1fr;
+  }
+}

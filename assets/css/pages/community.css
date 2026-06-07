@@ -1,0 +1,257 @@
+/* =============================================================
+   pages/community.css — Community Events & Gallery page styles
+   Dunsin Fakorede · Ward 5 · Arise St. Catharines
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO — two-col, overlay--80 per ASSET A spec
+   ------------------------------------------------------------- */
+.hero--community {
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero--community {
+    min-height: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   FILTER BAR
+   Sticky below the navbar (68px offset)
+   ------------------------------------------------------------- */
+.filter-bar {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: var(--md) 0;
+  position: sticky;
+  top: 68px;
+  z-index: 90;
+  box-shadow: var(--shadow-nav);
+}
+
+.filter-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm);
+  align-items: center;
+}
+
+.filter-btn {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  color: var(--teal);
+  border-color: var(--teal);
+  background-color: var(--ltteal);
+}
+
+.filter-btn.active,
+.filter-btn[aria-pressed="true"] {
+  background-color: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-bar__inner {
+    flex-wrap: nowrap;
+    width: max-content;
+    padding-bottom: 2px;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   EVENTS SECTION
+   ------------------------------------------------------------- */
+.events-section {
+  background-color: var(--light-bg);
+}
+
+
+/* -------------------------------------------------------------
+   EVENTS GRID — 3-col → 2-col → 1-col
+   ------------------------------------------------------------- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--xl);
+  margin-top: var(--xl);
+}
+
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   EVENT CARD
+   white bg · 12px radius · 3px teal top border · hover lift
+   ------------------------------------------------------------- */
+.event-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  border-top: 3px solid var(--teal);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.event-card:hover {
+  box-shadow: 0 8px 32px rgba(12, 35, 64, 0.18);
+  transform: translateY(-3px);
+}
+
+
+/* -------------------------------------------------------------
+   EVENT PHOTO
+   Fixed-height container with category tag overlay
+   ------------------------------------------------------------- */
+.event-photo {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: var(--navy);
+  /* gradient fallback when no photo yet */
+  background-image: linear-gradient(
+    135deg,
+    var(--navy) 0%,
+    rgba(10, 110, 86, 0.60) 100%
+  );
+}
+
+.event-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.event-card:hover .event-photo img {
+  transform: scale(1.04);
+}
+
+/* Category tag — teal pill, top-right of photo */
+.event-category-tag {
+  position: absolute;
+  top: var(--md);
+  right: var(--md);
+  background-color: var(--teal);
+  color: var(--white);
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+}
+
+
+/* -------------------------------------------------------------
+   EVENT INFO
+   ------------------------------------------------------------- */
+.event-info {
+  padding: var(--lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm);
+  flex: 1;
+}
+
+.event-date {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.event-title {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.event-location {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.event-description {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+
+/* -------------------------------------------------------------
+   CTA STRIP — uses .cta-strip from components.css (teal bg)
+   Override button style to white-fill per handoff spec
+   ------------------------------------------------------------- */
+.cta-strip .btn--outline {
+  background-color: var(--white);
+  color: var(--teal);
+  border-color: var(--white);
+}
+
+.cta-strip .btn--outline:hover {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}

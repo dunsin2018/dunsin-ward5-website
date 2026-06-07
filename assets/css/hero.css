@@ -1,0 +1,446 @@
+/* =============================================================
+   hero.css — Shared Hero Section Styles
+   All hero variants used across the 8-page site
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   HERO BASE
+   ------------------------------------------------------------- */
+.hero {
+  position: relative;
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* Default hero height for inner pages */
+.hero {
+  min-height: 420px;
+  padding: var(--3xl) 0 var(--2xl);
+}
+
+/* Homepage hero is taller */
+.hero--home {
+  min-height: 620px;
+  padding: var(--3xl) 0;
+}
+
+/* Background image heroes */
+.hero--bg-banner {
+  background-image: url('../images/hero-banner.png');
+}
+
+
+/* -------------------------------------------------------------
+   OVERLAY
+   ------------------------------------------------------------- */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Gradient overlay — homepage */
+.hero__overlay--gradient {
+  background: linear-gradient(
+    to right,
+    rgba(12, 35, 64, 0.90) 45%,
+    rgba(12, 35, 64, 0.30) 100%
+  );
+}
+
+/* Solid overlays — inner pages */
+.hero__overlay--85 {
+  background: rgba(12, 35, 64, 0.85);
+}
+
+.hero__overlay--80 {
+  background: rgba(12, 35, 64, 0.80);
+}
+
+
+/* -------------------------------------------------------------
+   HERO INNER — content wrapper
+   ------------------------------------------------------------- */
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+
+/* -------------------------------------------------------------
+   HERO LAYOUT VARIANTS
+   ------------------------------------------------------------- */
+
+/* Centered — simple inner pages (About hero text, Platform) */
+.hero__content--centered {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Two-column — image on right */
+.hero__content--two-col {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: var(--xl);
+  align-items: center;
+}
+
+/* Homepage specific: text 55%, image 45% */
+.hero__content--home {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: var(--xl);
+  align-items: center;
+}
+
+/* Get Involved: text left, poster right at 55% */
+.hero__content--poster {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: var(--xl);
+  align-items: center;
+}
+
+
+/* -------------------------------------------------------------
+   HERO TEXT
+   ------------------------------------------------------------- */
+.hero__label {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--md);
+}
+
+.hero__title {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.10;
+  margin-bottom: var(--md);
+}
+
+.hero__subtitle {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: var(--lg);
+}
+
+.hero__body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.7;
+  margin-bottom: var(--xl);
+  max-width: 560px;
+}
+
+.hero__subtext {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+  margin-top: var(--md);
+  max-width: 580px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: var(--md);
+  flex-wrap: wrap;
+  margin-bottom: var(--xl);
+}
+
+
+/* -------------------------------------------------------------
+   HERO IMAGE — right column
+   ------------------------------------------------------------- */
+.hero__image-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circular headshot — homepage (ASSET C) */
+.hero__headshot-circle {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 4px solid var(--teal);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.40);
+  display: block;
+}
+
+/* Rectangular warm headshot — inner pages (ASSET D) */
+.hero__headshot-rect {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-card);
+  object-fit: cover;
+  object-position: top center;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+/* Campaign poster — Get Involved */
+.hero__poster {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius-card);
+  object-fit: cover;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.40);
+  display: block;
+}
+
+
+/* -------------------------------------------------------------
+   COUNTDOWN TIMER — homepage only
+   ------------------------------------------------------------- */
+.countdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm);
+}
+
+.countdown__label {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.countdown__units {
+  display: flex;
+  gap: var(--md);
+  align-items: flex-end;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown__number {
+  font-family: var(--font-head);
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  min-width: 58px;
+  text-align: center;
+}
+
+.countdown__text {
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.countdown__sep {
+  font-family: var(--font-head);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+  padding-bottom: 18px;
+}
+
+.election-live {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+
+/* -------------------------------------------------------------
+   TRUST BAR — below homepage hero
+   ------------------------------------------------------------- */
+.trust-bar {
+  background-color: rgba(10, 110, 86, 0.10);
+  border-top: 1px solid rgba(10, 110, 86, 0.20);
+  border-bottom: 1px solid rgba(10, 110, 86, 0.20);
+  padding: var(--lg) 0;
+}
+
+.trust-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--lg);
+  align-items: center;
+}
+
+.trust-bar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+  justify-content: center;
+}
+
+.trust-bar__icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.trust-bar__text {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero__headshot-circle {
+    width: 340px;
+    height: 340px;
+  }
+
+  .hero__content--two-col,
+  .hero__content--home {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--lg);
+  }
+
+  .trust-bar__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--md);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero--home {
+    min-height: auto;
+    padding: var(--xl) 0 var(--2xl);
+  }
+
+  .hero {
+    min-height: auto;
+    padding: var(--xl) 0;
+  }
+
+  /* Re-anchor background image for taller mobile layout */
+  .hero--bg-banner {
+    background-position: center 20%;
+  }
+
+  /* Stack two-column hero layouts on mobile */
+  .hero__content--two-col,
+  .hero__content--home,
+  .hero__content--poster {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* On mobile, image column appears ABOVE text for homepage */
+  .hero__content--home .hero__image-col {
+    order: -1;
+  }
+
+  .hero__headshot-circle {
+    width: 220px;
+    height: 220px;
+    border-width: 3px;
+  }
+
+  /* Cap stacked rect headshot so it doesn't bloat the hero height */
+  .hero__headshot-rect {
+    max-height: 260px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    margin: 0 auto;
+  }
+
+  /* Cap stacked poster similarly */
+  .hero__poster {
+    max-height: 280px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .hero__body {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__buttons {
+    justify-content: center;
+  }
+
+  .hero__subtext {
+    max-width: 100%;
+  }
+
+  /* Homepage mobile: show campaign poster instead of headshot circle */
+  .hero__headshot-circle--mobile-hide {
+    display: none;
+  }
+
+  .hero__poster--mobile-hero {
+    display: block;
+    max-width: 280px;
+    margin: 0 auto var(--lg);
+  }
+
+  /* Trust bar */
+  .trust-bar__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Countdown */
+  .countdown__number {
+    font-size: 32px;
+    min-width: 44px;
+  }
+
+  .countdown__units {
+    gap: var(--sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-bar__inner {
+    grid-template-columns: 1fr;
+    gap: var(--sm);
+  }
+
+  .trust-bar__item {
+    justify-content: flex-start;
+  }
+
+  .hero__content--two-col .hero__image-col,
+  .hero__content--poster .hero__image-col {
+    display: none;
+  }
+}
