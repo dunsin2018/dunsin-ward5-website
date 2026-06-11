@@ -395,6 +395,58 @@
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/gallery-filter.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (async function () {
+      var API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+        ? 'http://localhost:5000/api/v1'
+        : 'https://dunsin-ward5-backend.onrender.com/api/v1';
+
+      var LABELS = {
+        canvassing: 'Canvassing',
+        business:   'Business Visits',
+        community:  'Community Events',
+        faith:      'Faith & Cultural',
+        seniors:    'Seniors',
+        meeting:    'Meetings'
+      };
+
+      function esc(s) {
+        return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+
+      function fmtDate(iso) {
+        if (!iso) return '';
+        return new Date(iso).toLocaleDateString('en-CA', { month: 'long', year: 'numeric' });
+      }
+
+      function buildCard(ev) {
+        var photo = ev.photoUrl
+          ? '<img src="' + esc(ev.photoUrl) + '" alt="' + esc(ev.photoAlt || ev.title) + '" loading="lazy">'
+          : '<div class="event-photo__placeholder" aria-hidden="true">📸</div>';
+        var tag = esc(LABELS[ev.category] || ev.category);
+        return '<div class="event-card" data-category="' + esc(ev.category) + '">'
+          + '<div class="event-photo">' + photo
+          + '<span class="event-category-tag">' + tag + '</span></div>'
+          + '<div class="event-info">'
+          + '<span class="event-date">' + fmtDate(ev.date) + '</span>'
+          + '<h3 class="event-title">' + esc(ev.title) + '</h3>'
+          + (ev.location    ? '<p class="event-location">📍 ' + esc(ev.location) + '</p>' : '')
+          + (ev.description ? '<p class="event-description">' + esc(ev.description) + '</p>' : '')
+          + '</div></div>';
+      }
+
+      try {
+        var res = await fetch(API_BASE + '/events');
+        if (!res.ok) return;
+        var body = await res.json();
+        var events = Array.isArray(body) ? body : (body.data || []);
+        if (!events.length) return;
+        document.getElementById('events-grid').innerHTML = events.map(buildCard).join('');
+      } catch (e) {
+        // API unavailable — static fallback cards remain visible
+      }
+    }());
+  </script>
 
 </body>
 </html>

@@ -1,7 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('assets/images/hero-banner.png'\\); print\\(img.size, img.mode\\)\")"
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('assets/images/hero-banner.png'\\); print\\(img.size, img.mode\\)\")",
+      "Bash(node -e \"require\\('./middleware/auth'\\); require\\('./routes/events'\\); require\\('./controllers/eventsController'\\); console.log\\('All modules load OK'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(dir /s /b)",
+      "Bash(findstr /v node_modules)",
+      "Bash(findstr /v \".git\\\\\\\\\")",
+      "Bash(echo \"exit:$?\")",
+      "Bash(node --check scripts/testAPI.js)",
+      "Bash(node -e \"const http=require\\('http'\\); const req=http.get\\('http://localhost:5000/',res=>{let d='';res.on\\('data',c=>d+=c\\);res.on\\('end',\\(\\)=>{try{const j=JSON.parse\\(d\\);console.log\\('RUNNING:',j.message\\);}catch{console.log\\('RUNNING: port 5000 in use'\\);}}\\);req.on\\('error',\\(\\)=>console.log\\('NOT_RUNNING'\\)\\);}\\);\")",
+      "Bash(node scripts/testAPI.js)",
+      "Bash(netstat -ano)",
+      "Bash(powershell -command \"netstat -ano | Select-String ':5000' | Select-String 'LISTENING'\")",
+      "Bash(taskkill /PID 5964 /F)",
+      "Bash(node scripts/createAdmin.js)",
+      "PowerShell(Get-Process *)",
+      "Bash(node scripts/keepAlive.js)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(node scripts/testAPI.js --base=https://dunsin-ward5-backend.onrender.com/api/v1)",
+      "Bash(start *)",
+      "Bash(timeout 10 node -e ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:5500/admin-panel/index.html)",
+      "Bash(ping *)",
+      "Bash(git commit *)"
     ]
   }
 }

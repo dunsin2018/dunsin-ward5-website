@@ -624,6 +624,72 @@
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/countdown.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (async function () {
+      var API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+        ? 'http://localhost:5000/api/v1'
+        : 'https://dunsin-ward5-backend.onrender.com/api/v1';
+
+      function esc(s) {
+        return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+
+      function fmtLong(iso) {
+        if (!iso) return '';
+        return new Date(iso).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' });
+      }
+
+      try {
+        var res = await fetch(API_BASE + '/events');
+        if (!res.ok) return;
+        var body = await res.json();
+        var all = Array.isArray(body) ? body : (body.data || []);
+        var now = new Date();
+
+        // Community snapshot: 3 most recent events
+        var recent = all.slice().sort(function (a, b) {
+          return new Date(b.date || 0) - new Date(a.date || 0);
+        }).slice(0, 3);
+
+        if (recent.length) {
+          var grid = document.querySelector('.community-preview-grid');
+          if (grid) {
+            grid.innerHTML = recent.map(function (ev) {
+              var photo = ev.photoUrl
+                ? '<img src="' + esc(ev.photoUrl) + '" alt="' + esc(ev.photoAlt || ev.title) + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;">'
+                : '<div class="community-preview-grid__placeholder"><span>📸</span><span>Photo coming soon</span></div>';
+              return '<div class="community-preview-grid__item">'
+                + photo
+                + '<div class="community-preview-grid__overlay">'
+                + '<p class="community-preview-grid__caption">' + esc(ev.title) + '</p>'
+                + '</div></div>';
+            }).join('');
+          }
+        }
+
+        // Events strip: next 3 upcoming events
+        var upcoming = all.filter(function (e) {
+          return e.date && new Date(e.date) >= now;
+        }).sort(function (a, b) {
+          return new Date(a.date) - new Date(b.date);
+        }).slice(0, 3);
+
+        if (upcoming.length) {
+          var list = document.querySelector('.events-strip__list');
+          if (list) {
+            list.innerHTML = upcoming.map(function (ev) {
+              return '<div class="events-strip__item">'
+                + '<span class="events-strip__date">' + fmtLong(ev.eventDate) + '</span>'
+                + '<span class="events-strip__name">' + esc(ev.title) + '</span>'
+                + '</div>';
+            }).join('');
+          }
+        }
+      } catch (e) {
+        // API unavailable — static fallback content remains visible
+      }
+    }());
+  </script>
 
 </body>
 </html>
