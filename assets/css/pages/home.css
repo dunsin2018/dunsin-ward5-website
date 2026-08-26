@@ -15,6 +15,103 @@
 
 
 /* -------------------------------------------------------------
+   WHAT I'M HEARING FROM WARD 5
+   ------------------------------------------------------------- */
+.hearing-section {
+  background-color: var(--white);
+}
+
+
+/* -------------------------------------------------------------
+   PROBLEMS / PLAN COMPARISON TABLE
+   Desktop: two-column table with a shared header row.
+   Mobile: header hides, each cell gets an inline label instead.
+   ------------------------------------------------------------- */
+.compare-table {
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  margin-top: var(--xl);
+}
+
+.compare-table__header,
+.compare-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.compare-table__header {
+  background-color: var(--navy);
+}
+
+.compare-table__header-cell {
+  padding: var(--md) var(--lg);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.compare-table__header-cell--plan {
+  color: var(--gold);
+}
+
+.compare-table__row {
+  border-top: 1px solid rgba(12, 35, 64, 0.08);
+}
+
+.compare-table__cell {
+  padding: var(--lg);
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.compare-table__cell--plan {
+  color: var(--navy);
+  font-weight: 600;
+  border-left: 1px solid rgba(12, 35, 64, 0.08);
+}
+
+.compare-table__cell-label {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .compare-table__header {
+    display: none;
+  }
+
+  .compare-table__row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-table__cell--plan {
+    border-left: none;
+    border-top: 1px dashed rgba(12, 35, 64, 0.15);
+  }
+
+  .compare-table__cell-label {
+    display: block;
+    font-family: var(--font-label);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+
+  .compare-table__cell-label--plan {
+    color: var(--gold);
+  }
+}
+
+
+/* -------------------------------------------------------------
    TOP 3 ISSUES SECTION
    ------------------------------------------------------------- */
 .issues-section {
@@ -66,6 +163,19 @@
    .bg-navy .section-header h2 and .bg-navy .section-header
    .section-intro handle the white text overrides automatically.
    ------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+   SHARE YOUR CONCERN — resident feedback form
+   ------------------------------------------------------------- */
+.feedback-section {
+  background-color: var(--light-bg);
+}
+
+.feedback-form-wrap {
+  max-width: 640px;
+  margin: var(--xl) auto 0;
+}
 
 
 /* -------------------------------------------------------------

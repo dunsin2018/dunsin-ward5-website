@@ -275,7 +275,7 @@ select.form-control {
    ------------------------------------------------------------- */
 @media (max-width: 768px) {
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .form--card {

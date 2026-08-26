@@ -69,5 +69,6 @@
   wireForm('[name="lawn-sign-request"]', 'forms/lawn-sign-success.html');
   wireForm('[name="contact-general"]', 'forms/contact-success.html');
   wireForm('[name="donation-record"]', 'forms/donate-success.html');
+  wireForm('[name="resident-feedback"]', 'forms/feedback-success.html');
 
 }());

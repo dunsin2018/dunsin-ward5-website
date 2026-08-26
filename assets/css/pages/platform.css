@@ -51,6 +51,85 @@
 
 
 /* -------------------------------------------------------------
+   BIGGER PICTURE SECTION — taxpayers, infrastructure, accountability
+   ------------------------------------------------------------- */
+.bigger-picture-section {
+  background-color: var(--white);
+}
+
+.bigger-picture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--lg);
+  margin-top: var(--xl);
+}
+
+@media (max-width: 900px) {
+  .bigger-picture-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--xl);
+  }
+}
+
+.bigger-picture-card {
+  background-color: var(--light-bg);
+  border-radius: var(--radius-card);
+  padding: var(--xl);
+  border-top: 4px solid var(--gold);
+}
+
+.bigger-picture-card__icon {
+  font-size: 32px;
+  margin-bottom: var(--md);
+  display: block;
+}
+
+.bigger-picture-card__title {
+  font-family: var(--font-head);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--sm);
+  line-height: 1.3;
+}
+
+.bigger-picture-card__body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: var(--md);
+}
+
+.bigger-picture-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bigger-picture-card__list li {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.bigger-picture-card__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+
+/* -------------------------------------------------------------
    INITIATIVES SECTION
    ------------------------------------------------------------- */
 .initiatives-section {

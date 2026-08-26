@@ -47,7 +47,7 @@
 <body>
 
   <div id="election-banner" role="alert" aria-live="polite">
-    🗳 Election Day — October 26, 2026 — Vote Today!
+    🗳 Election Day — October 26, 2026
   </div>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -200,6 +200,83 @@
 
 
     <!-- ═══════════════════════════════════════════════════════════
+         SECTION 0 — WHAT I'M HEARING FROM WARD 5
+         Background: white · leads directly into Three Priorities
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="section hearing-section" id="hearing">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="label">What I'm Hearing</span>
+          <h2>What I'm Hearing From Ward 5</h2>
+          <p class="section-intro">
+            At doors across Grantham, the same concerns keep coming up: rising
+            costs for renters and families, infrastructure and sidewalks that
+            haven't kept pace with an aging population, and a community that
+            wants to see real investment — not just more buildings.
+          </p>
+          <p class="section-intro">
+            I'm listening, and here's what that means for the plan.
+          </p>
+        </div>
+
+        <div class="compare-table reveal" role="table" aria-label="What residents are experiencing and what I will advocate for">
+
+          <div class="compare-table__header" role="row">
+            <span class="compare-table__header-cell" role="columnheader">What Residents Are Experiencing</span>
+            <span class="compare-table__header-cell compare-table__header-cell--plan" role="columnheader">What I Will Advocate For</span>
+          </div>
+
+          <div class="compare-table__row" role="row">
+            <span class="compare-table__cell" role="cell">
+              <span class="compare-table__cell-label">Residents Are Experiencing</span>
+              Rising municipal costs
+            </span>
+            <span class="compare-table__cell compare-table__cell--plan" role="cell">
+              <span class="compare-table__cell-label compare-table__cell-label--plan">My Plan</span>
+              Budget discipline and clearer spending priorities
+            </span>
+          </div>
+
+          <div class="compare-table__row" role="row">
+            <span class="compare-table__cell" role="cell">
+              <span class="compare-table__cell-label">Residents Are Experiencing</span>
+              Flooding and aging infrastructure
+            </span>
+            <span class="compare-table__cell compare-table__cell--plan" role="cell">
+              <span class="compare-table__cell-label compare-table__cell-label--plan">My Plan</span>
+              Risk-based infrastructure planning and transparent reporting
+            </span>
+          </div>
+
+          <div class="compare-table__row" role="row">
+            <span class="compare-table__cell" role="cell">
+              <span class="compare-table__cell-label">Residents Are Experiencing</span>
+              Business frustration and limited investment
+            </span>
+            <span class="compare-table__cell compare-table__cell--plan" role="cell">
+              <span class="compare-table__cell-label compare-table__cell-label--plan">My Plan</span>
+              Faster, clearer and more predictable municipal processes
+            </span>
+          </div>
+
+          <div class="compare-table__row" role="row">
+            <span class="compare-table__cell" role="cell">
+              <span class="compare-table__cell-label">Residents Are Experiencing</span>
+              Lack of communication
+            </span>
+            <span class="compare-table__cell compare-table__cell--plan" role="cell">
+              <span class="compare-table__cell-label compare-table__cell-label--plan">My Plan</span>
+              Regular Ward 5 accountability updates and accessible representation
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
          SECTION 1 — TOP 3 ISSUES
          Background: --light-bg
          ═══════════════════════════════════════════════════════════ -->
@@ -333,37 +410,27 @@
         </div>
 
         <!--
-          UPDATE INSTRUCTIONS: Replace these 3 placeholder items with real
-          event photos whenever a new event is added to community.html.
-          Use the same img structure shown in the event card template.
+          UPDATE INSTRUCTIONS: Once real event photos exist, add an <img>
+          inside the relevant .community-preview-grid__item (see the event
+          card template in community.html) and drop the "--no-photo" modifier
+          class below. Until then, each item uses the brand gradient fallback
+          instead of an unfinished "coming soon" placeholder.
         -->
         <div class="community-preview-grid reveal">
 
-          <div class="community-preview-grid__item">
-            <div class="community-preview-grid__placeholder">
-              <span>📸</span>
-              <span>Photo coming soon</span>
-            </div>
+          <div class="community-preview-grid__item community-preview-grid__item--no-photo">
             <div class="community-preview-grid__overlay">
               <p class="community-preview-grid__caption">Latest Community Event</p>
             </div>
           </div>
 
-          <div class="community-preview-grid__item">
-            <div class="community-preview-grid__placeholder">
-              <span>📸</span>
-              <span>Photo coming soon</span>
-            </div>
+          <div class="community-preview-grid__item community-preview-grid__item--no-photo">
             <div class="community-preview-grid__overlay">
               <p class="community-preview-grid__caption">Canvassing Ward 5</p>
             </div>
           </div>
 
-          <div class="community-preview-grid__item">
-            <div class="community-preview-grid__placeholder">
-              <span>📸</span>
-              <span>Photo coming soon</span>
-            </div>
+          <div class="community-preview-grid__item community-preview-grid__item--no-photo">
             <div class="community-preview-grid__overlay">
               <p class="community-preview-grid__caption">Meeting Local Businesses</p>
             </div>
@@ -375,6 +442,111 @@
           <a href="community.html" class="btn btn--outline">
             See All Community Events <span class="arrow">→</span>
           </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3B — SHARE YOUR CONCERN
+         Background: --light-bg · resident feedback form (Formspree)
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="section feedback-section" id="share-your-concern">
+      <div class="container">
+
+        <div class="section-header section-header--center reveal">
+          <span class="label">Built From Conversations With Residents</span>
+          <h2>Tell Me What You're Seeing in Ward 5</h2>
+          <p class="section-intro">
+            This campaign isn't being built from behind a desk. What I hear
+            from residents — about your street, your neighbourhood, your
+            priorities — continues to shape this platform. Some conversations
+            are short. Others last an hour. Either way, I want to hear from you.
+          </p>
+        </div>
+
+        <div class="feedback-form-wrap reveal">
+          <form
+            class="form form--card"
+            name="resident-feedback"
+            method="POST"
+            action="https://formspree.io/f/maqzzpaj"
+            novalidate>
+
+            <input type="hidden" name="_next" value="forms/feedback-success.html">
+            <input type="hidden" name="_subject" value="New Ward 5 resident feedback">
+
+            <div style="display:none" aria-hidden="true">
+              <label>Don't fill this out: <input name="_gotcha" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fb-name">
+                  Full Name <span class="required" aria-label="required">*</span>
+                </label>
+                <input class="form-input" type="text" id="fb-name" name="full_name"
+                       placeholder="Your name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fb-email">
+                  Email Address <span class="required" aria-label="required">*</span>
+                </label>
+                <input class="form-input" type="email" id="fb-email" name="email"
+                       placeholder="you@example.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fb-neighbourhood">
+                  Street or Neighbourhood
+                </label>
+                <input class="form-input" type="text" id="fb-neighbourhood" name="neighbourhood"
+                       placeholder="e.g. Vine St, Port Weller" autocomplete="address-level3">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fb-category">
+                  Issue Category <span class="required" aria-label="required">*</span>
+                </label>
+                <select class="form-input form-select" id="fb-category" name="issue_category" required>
+                  <option value="" disabled selected>Select an issue…</option>
+                  <option value="roads_traffic">Roads &amp; Traffic</option>
+                  <option value="flooding_infrastructure">Flooding &amp; Infrastructure</option>
+                  <option value="taxes_affordability">Taxes &amp; Affordability</option>
+                  <option value="local_business_jobs">Local Business &amp; Jobs</option>
+                  <option value="parks_recreation">Parks &amp; Recreation</option>
+                  <option value="seniors">Seniors</option>
+                  <option value="youth">Youth</option>
+                  <option value="community_safety">Community Safety</option>
+                  <option value="development">Development</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fb-message">
+                Your Concern <span class="required" aria-label="required">*</span>
+              </label>
+              <textarea class="form-input form-textarea" id="fb-message" name="message"
+                        rows="5" minlength="20"
+                        placeholder="Tell me what you're seeing on your street or in your neighbourhood…"
+                        required></textarea>
+              <span class="form-hint">Minimum 20 characters</span>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn--primary btn--lg btn--full">
+                Share Your Concern
+              </button>
+              <p class="form-privacy">
+                Your feedback helps shape this platform — thank you for taking the time.
+              </p>
+            </div>
+
+          </form>
         </div>
 
       </div>
@@ -458,11 +630,6 @@
         </div>
 
         <div class="events-strip__list reveal">
-
-          <div class="events-strip__item">
-            <span class="events-strip__date">July 19, 2026</span>
-            <span class="events-strip__name">Coalition Launch Event</span>
-          </div>
 
           <div class="events-strip__item">
             <span class="events-strip__date">September 13, 2026</span>
@@ -562,6 +729,7 @@
               <li><a href="community.html">Events &amp; Gallery</a></li>
               <li><a href="community.html">Canvassing</a></li>
               <li><a href="community.html">Business Visits</a></li>
+              <li><a href="index.html#share-your-concern">Share a Concern</a></li>
             </ul>
           </div>
           <div class="footer__col">
@@ -624,6 +792,7 @@
   <script src="assets/js/election-banner.js"></script>
   <script src="assets/js/scroll-animations.js"></script>
   <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/forms.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     (async function () {
@@ -658,8 +827,9 @@
             grid.innerHTML = recent.map(function (ev) {
               var photo = ev.photoUrl
                 ? '<img src="' + esc(ev.photoUrl) + '" alt="' + esc(ev.photoAlt || ev.title) + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;">'
-                : '<div class="community-preview-grid__placeholder"><span>📸</span><span>Photo coming soon</span></div>';
-              return '<div class="community-preview-grid__item">'
+                : '';
+              var itemClass = ev.photoUrl ? 'community-preview-grid__item' : 'community-preview-grid__item community-preview-grid__item--no-photo';
+              return '<div class="' + itemClass + '">'
                 + photo
                 + '<div class="community-preview-grid__overlay">'
                 + '<p class="community-preview-grid__caption">' + esc(ev.title) + '</p>'
