@@ -195,6 +195,113 @@
   pointer-events: none;
 }
 
+/* Gallery button — bottom-right of photo, opens lightbox */
+.event-photo__gallery-btn {
+  position: absolute;
+  bottom: var(--md);
+  right: var(--md);
+  background-color: rgba(12, 35, 64, 0.75);
+  color: var(--white);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.event-photo__gallery-btn:hover,
+.event-photo__gallery-btn:focus-visible {
+  background-color: var(--teal);
+}
+
+
+/* -------------------------------------------------------------
+   EVENT PHOTO LIGHTBOX
+   Full-screen overlay for viewing all photos in an event gallery
+   ------------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(12, 35, 64, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-card);
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+}
+
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background-color: var(--teal);
+}
+
+.lightbox__close {
+  top: var(--lg);
+  right: var(--lg);
+}
+
+.lightbox__prev {
+  left: var(--lg);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__next {
+  right: var(--lg);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__counter {
+  position: absolute;
+  bottom: var(--lg);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .lightbox__prev { left: var(--sm); }
+  .lightbox__next { right: var(--sm); }
+  .lightbox__close { top: var(--sm); right: var(--sm); }
+}
+
 
 /* -------------------------------------------------------------
    EVENT INFO
