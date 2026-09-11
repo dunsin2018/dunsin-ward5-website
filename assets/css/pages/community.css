@@ -178,6 +178,15 @@
   transform: scale(1.04);
 }
 
+.event-photo[data-gallery] {
+  cursor: pointer;
+}
+
+.event-photo[data-gallery]:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+}
+
 /* Category tag — teal pill, top-right of photo */
 .event-category-tag {
   position: absolute;
@@ -195,8 +204,8 @@
   pointer-events: none;
 }
 
-/* Gallery button — bottom-right of photo, opens lightbox */
-.event-photo__gallery-btn {
+/* Gallery badge — bottom-right of photo, hints the photo opens a lightbox */
+.event-photo__gallery-badge {
   position: absolute;
   bottom: var(--md);
   right: var(--md);
@@ -206,15 +215,14 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  border: none;
   padding: 6px 12px;
   border-radius: var(--radius-pill);
-  cursor: pointer;
+  pointer-events: none;
   transition: background-color var(--transition);
 }
 
-.event-photo__gallery-btn:hover,
-.event-photo__gallery-btn:focus-visible {
+.event-photo[data-gallery]:hover .event-photo__gallery-badge,
+.event-photo[data-gallery]:focus-visible .event-photo__gallery-badge {
   background-color: var(--teal);
 }
 

@@ -56,9 +56,20 @@
   });
 
   document.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-gallery]');
-    if (!btn) return;
-    var list = btn.getAttribute('data-gallery').split('|');
+    var trigger = e.target.closest('[data-gallery]');
+    if (!trigger) return;
+    var list = trigger.getAttribute('data-gallery').split('|');
+    open(list, 0);
+  });
+
+  // data-gallery triggers are divs (role="button"), not native <button>
+  // elements, so Enter/Space activation has to be wired up manually.
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var trigger = e.target.closest('[data-gallery]');
+    if (!trigger) return;
+    e.preventDefault();
+    var list = trigger.getAttribute('data-gallery').split('|');
     open(list, 0);
   });
 }());
