@@ -8,12 +8,9 @@ function applyEventFilter(category) {
   });
 
   document.querySelectorAll('.event-card').forEach(function (card) {
-    if (category === 'all' || card.dataset.category === category) {
-      card.style.display = 'block';
-      card.classList.add('reveal');
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = (category === 'all' || card.dataset.category === category)
+      ? 'block'
+      : 'none';
   });
 }
 
