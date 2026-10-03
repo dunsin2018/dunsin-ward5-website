@@ -8,9 +8,9 @@
    FOOTER SHELL
    ------------------------------------------------------------- */
 .footer {
-  background-color: var(--navy);
-  border-top: 4px solid var(--teal);
-  border-bottom: 4px solid var(--gold);
+  background-color: var(--green-dark);
+  border-top: 4px solid var(--green);
+  border-bottom: 4px solid var(--leaf);
   color: var(--white);
 }
 
@@ -41,7 +41,7 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border: 2px solid var(--teal);
+  border: 2px solid var(--green);
   flex-shrink: 0;
 }
 
@@ -79,7 +79,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--leaf);
   margin-bottom: var(--md);
 }
 
@@ -106,7 +106,7 @@
 }
 
 .footer__col ul li a:focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--leaf);
   outline-offset: 2px;
   border-radius: 2px;
   color: var(--white);
@@ -117,7 +117,7 @@
    TEAL HASHTAG BAR
    ------------------------------------------------------------- */
 .footer__hashtag-bar {
-  background-color: var(--teal);
+  background-color: var(--green);
   padding: 14px 0;
 }
 
@@ -154,7 +154,7 @@
 }
 
 .footer__divider {
-  color: rgba(255, 255, 255, 0.40);
+  color: rgba(255, 255, 255, 0.60);
 }
 
 .footer__vote {
@@ -185,14 +185,14 @@
 
 .footer__legal-text {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
   margin: 0;
   line-height: 1.5;
 }
 
 .footer__legal-links {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
   margin: 0;
   white-space: nowrap;
 }

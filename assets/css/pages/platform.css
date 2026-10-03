@@ -19,7 +19,7 @@
 
 
 /* -------------------------------------------------------------
-   HERO TITLE ROW — small headshot-navy.png beside H1
+   HERO TITLE ROW — small headshot-square.jpg beside H1
    ------------------------------------------------------------- */
 .platform-hero__title-row {
   display: flex;
@@ -33,7 +33,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid var(--teal);
+  border: 3px solid var(--green);
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -78,7 +78,7 @@
   background-color: var(--light-bg);
   border-radius: var(--radius-card);
   padding: var(--xl);
-  border-top: 4px solid var(--gold);
+  border-top: 4px solid var(--leaf);
 }
 
 .bigger-picture-card__icon {
@@ -91,7 +91,7 @@
   font-family: var(--font-head);
   font-size: 19px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   margin-bottom: var(--sm);
   line-height: 1.3;
 }
@@ -124,7 +124,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--teal);
+  color: var(--green);
   font-weight: 700;
 }
 
@@ -164,7 +164,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--md);
-  border-top: 4px solid var(--teal);
+  border-top: 4px solid var(--green);
 }
 
 .initiative-card__header {
@@ -177,7 +177,7 @@
   font-family: var(--font-head);
   font-size: 48px;
   font-weight: 900;
-  color: var(--teal);
+  color: var(--green);
   line-height: 1;
   min-width: 64px;
 }
@@ -191,7 +191,7 @@
   font-family: var(--font-head);
   font-size: 20px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   line-height: 1.3;
   margin: 0;
 }
@@ -230,7 +230,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--teal);
+  color: var(--green);
   font-weight: 700;
   font-size: 12px;
   top: 2px;
@@ -238,8 +238,8 @@
 
 /* "Why this matters" callout box */
 .initiative-card__callout {
-  background-color: var(--ltteal);
-  border-left: 3px solid var(--teal);
+  background-color: var(--green-tint);
+  border-left: 3px solid var(--green);
   border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
   padding: var(--md) var(--lg);
   margin-top: var(--sm);
@@ -251,7 +251,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--green);
   margin-bottom: 6px;
 }
 

@@ -50,7 +50,7 @@
   font-family: var(--font-head);
   font-size: clamp(20px, 2.2vw, 26px);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   margin-bottom: var(--lg);
 }
 
@@ -100,7 +100,7 @@
 .form-check input[type="radio"] {
   width: 18px;
   height: 18px;
-  accent-color: var(--teal);
+  accent-color: var(--green);
   flex-shrink: 0;
   cursor: pointer;
 }

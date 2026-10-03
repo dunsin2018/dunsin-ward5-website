@@ -1,3 +1,12 @@
+> **Brand update (Oct 2026):** the site now uses the green palette from the
+> official campaign banner. Tokens in `assets/css/main.css`: `--green-dark`
+> #183C20, `--green-mid` #32733B, `--green` #306C36, `--green-bright` #2E7D32,
+> `--leaf` #A3D977 (accent on dark), `--green-tint` #DCEEDD, `--green-pale`
+> #EEF6EE. Images: `banner.jpg` (+ `-1200`, `-768`) shown full-width above every
+> page hero; headshot is `headshot.jpg` / `headshot-square.jpg` /
+> `headshot-160.jpg` (footer) / `headshot-hires.jpg` (media kit). The navy,
+> teal and gold values and ASSET A–D files below are retired.
+
 # HANDOFF DOCUMENT — Dunsin Fakorede Campaign Website
 ## Ward 5 Grantham · St. Catharines Municipal Election · October 26, 2026
 ### Version 4 — FINAL — Complete with Claude Code workflow, Community Gallery & all assets

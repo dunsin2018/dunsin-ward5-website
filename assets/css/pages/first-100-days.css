@@ -56,24 +56,24 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--gold);
+  background-color: var(--leaf);
   border: 3px solid var(--light-bg);
-  box-shadow: 0 0 0 2px var(--gold);
+  box-shadow: 0 0 0 2px var(--leaf);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
 }
 
 .f100-timeline__dot--final {
-  background-color: var(--teal);
-  box-shadow: 0 0 0 2px var(--teal);
+  background-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green);
 }
 
 .f100-timeline__line {
   width: 2px;
   flex: 1;
   min-height: var(--2xl);
-  background: linear-gradient(to bottom, var(--gold), var(--teal));
+  background: linear-gradient(to bottom, var(--leaf), var(--green));
   margin-top: 4px;
 }
 
@@ -122,14 +122,14 @@
   padding: var(--xl);
   background-color: var(--light-bg);
   border-radius: var(--radius-card);
-  border-left: 4px solid var(--teal);
+  border-left: 4px solid var(--green);
 }
 
 .f100-cta-title {
   font-family: var(--font-head);
   font-size: clamp(20px, 2.2vw, 26px);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   margin-bottom: var(--sm);
 }
 

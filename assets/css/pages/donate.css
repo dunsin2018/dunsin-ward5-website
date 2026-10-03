@@ -54,7 +54,7 @@
   font-family: var(--font-head);
   font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   margin-bottom: var(--lg);
 }
 
@@ -69,8 +69,8 @@
   line-height: 1.65;
   margin-bottom: var(--lg);
   padding: var(--md) var(--lg);
-  background-color: var(--ltteal);
-  border-left: 3px solid var(--teal);
+  background-color: var(--green-tint);
+  border-left: 3px solid var(--green);
   border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
 }
 
@@ -98,7 +98,7 @@
 .form-check input[type="radio"] {
   width: 18px;
   height: 18px;
-  accent-color: var(--teal);
+  accent-color: var(--green);
   flex-shrink: 0;
   cursor: pointer;
 }
