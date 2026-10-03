@@ -47,7 +47,7 @@
 }
 
 .values-block {
-  border-left: 4px solid var(--teal);
+  border-left: 4px solid var(--green);
   padding-left: var(--xl);
   max-width: 820px;
 }

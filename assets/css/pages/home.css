@@ -42,7 +42,7 @@
 }
 
 .compare-table__header {
-  background-color: var(--navy);
+  background-color: var(--green-dark);
 }
 
 .compare-table__header-cell {
@@ -56,11 +56,11 @@
 }
 
 .compare-table__header-cell--plan {
-  color: var(--gold);
+  color: var(--leaf);
 }
 
 .compare-table__row {
-  border-top: 1px solid rgba(12, 35, 64, 0.08);
+  border-top: 1px solid rgba(24, 60, 32, 0.08);
 }
 
 .compare-table__cell {
@@ -71,9 +71,9 @@
 }
 
 .compare-table__cell--plan {
-  color: var(--navy);
+  color: var(--green-dark);
   font-weight: 600;
-  border-left: 1px solid rgba(12, 35, 64, 0.08);
+  border-left: 1px solid rgba(24, 60, 32, 0.08);
 }
 
 .compare-table__cell-label {
@@ -91,7 +91,7 @@
 
   .compare-table__cell--plan {
     border-left: none;
-    border-top: 1px dashed rgba(12, 35, 64, 0.15);
+    border-top: 1px dashed rgba(24, 60, 32, 0.15);
   }
 
   .compare-table__cell-label {
@@ -101,12 +101,12 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--green);
     margin-bottom: 4px;
   }
 
   .compare-table__cell-label--plan {
-    color: var(--gold);
+    color: var(--green-bright);
   }
 }
 
@@ -159,8 +159,8 @@
 
 /* -------------------------------------------------------------
    COMMUNITY SNAPSHOT SECTION
-   bg-navy class is added in HTML so components.css selectors
-   .bg-navy .section-header h2 and .bg-navy .section-header
+   bg-green-dark class is added in HTML so components.css selectors
+   .bg-green-dark .section-header h2 and .bg-green-dark .section-header
    .section-intro handle the white text overrides automatically.
    ------------------------------------------------------------- */
 

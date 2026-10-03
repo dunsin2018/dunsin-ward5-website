@@ -56,20 +56,20 @@
 }
 
 .filter-btn:hover {
-  color: var(--teal);
-  border-color: var(--teal);
-  background-color: var(--ltteal);
+  color: var(--green);
+  border-color: var(--green);
+  background-color: var(--green-tint);
 }
 
 .filter-btn.active,
 .filter-btn[aria-pressed="true"] {
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
-  border-color: var(--teal);
+  border-color: var(--green);
 }
 
 .filter-btn:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--green);
   outline-offset: 2px;
 }
 
@@ -133,7 +133,7 @@
 .event-card {
   background-color: var(--white);
   border-radius: var(--radius-card);
-  border-top: 3px solid var(--teal);
+  border-top: 3px solid var(--green);
   box-shadow: var(--shadow-card);
   overflow: hidden;
   display: flex;
@@ -142,7 +142,7 @@
 }
 
 .event-card:hover {
-  box-shadow: 0 8px 32px rgba(12, 35, 64, 0.18);
+  box-shadow: 0 8px 32px rgba(24, 60, 32, 0.18);
   transform: translateY(-3px);
 }
 
@@ -156,12 +156,12 @@
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background-color: var(--navy);
+  background-color: var(--green-dark);
   /* gradient fallback when no photo yet */
   background-image: linear-gradient(
     135deg,
-    var(--navy) 0%,
-    rgba(10, 110, 86, 0.60) 100%
+    var(--green-dark) 0%,
+    rgba(48, 108, 54, 0.60) 100%
   );
 }
 
@@ -183,7 +183,7 @@
 }
 
 .event-photo[data-gallery]:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: -3px;
 }
 
@@ -192,7 +192,7 @@
   position: absolute;
   top: var(--md);
   right: var(--md);
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
   font-family: var(--font-label);
   font-size: 10px;
@@ -209,7 +209,7 @@
   position: absolute;
   bottom: var(--md);
   right: var(--md);
-  background-color: rgba(12, 35, 64, 0.75);
+  background-color: rgba(24, 60, 32, 0.75);
   color: var(--white);
   font-family: var(--font-label);
   font-size: 12px;
@@ -223,7 +223,7 @@
 
 .event-photo[data-gallery]:hover .event-photo__gallery-badge,
 .event-photo[data-gallery]:focus-visible .event-photo__gallery-badge {
-  background-color: var(--teal);
+  background-color: var(--green);
 }
 
 
@@ -235,7 +235,7 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background-color: rgba(12, 35, 64, 0.92);
+  background-color: rgba(24, 60, 32, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,7 +273,7 @@
 .lightbox__close:hover,
 .lightbox__prev:hover,
 .lightbox__next:hover {
-  background-color: var(--teal);
+  background-color: var(--green);
 }
 
 .lightbox__close {
@@ -328,14 +328,14 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green-bright);
 }
 
 .event-title {
   font-family: var(--font-head);
   font-size: 18px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   line-height: 1.3;
   margin: 0;
 }
@@ -361,7 +361,7 @@
    ------------------------------------------------------------- */
 .cta-strip .btn--outline {
   background-color: var(--white);
-  color: var(--teal);
+  color: var(--green);
   border-color: var(--white);
 }
 

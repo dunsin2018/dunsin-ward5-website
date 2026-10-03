@@ -9,7 +9,7 @@
    ------------------------------------------------------------- */
 .hero {
   position: relative;
-  background-color: var(--navy);
+  background-color: var(--green-dark);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -19,19 +19,46 @@
 
 /* Default hero height for inner pages */
 .hero {
-  min-height: 420px;
-  padding: var(--3xl) 0 var(--2xl);
+  min-height: 320px;
+  padding: var(--2xl) 0;
 }
 
 /* Homepage hero is taller */
 .hero--home {
-  min-height: 620px;
-  padding: var(--3xl) 0;
+  min-height: 520px;
+  padding: var(--2xl) 0;
 }
 
-/* Background image heroes */
+/* Hero band below the campaign banner — solid green with the
+   banner's diagonal stripe motif */
 .hero--bg-banner {
-  background-image: url('../images/hero-banner.png');
+  background-color: var(--green-dark);
+  background-image:
+    linear-gradient(115deg, transparent 62%, rgba(163, 217, 119, 0.07) 62%, rgba(163, 217, 119, 0.07) 74%, transparent 74%),
+    linear-gradient(115deg, transparent 78%, rgba(48, 108, 54, 0.55) 78%, rgba(48, 108, 54, 0.55) 90%, transparent 90%),
+    linear-gradient(135deg, var(--green-dark) 0%, #1F4A27 100%);
+}
+
+/* Overlays were for the old photo background; the band is solid now */
+.hero--bg-banner .hero__overlay {
+  display: none;
+}
+
+
+/* -------------------------------------------------------------
+   CAMPAIGN BANNER — full-width image above every page hero
+   ------------------------------------------------------------- */
+.page-banner {
+  background-color: var(--white);
+  line-height: 0;
+}
+
+.page-banner__img {
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -48,18 +75,18 @@
 .hero__overlay--gradient {
   background: linear-gradient(
     to right,
-    rgba(12, 35, 64, 0.90) 45%,
-    rgba(12, 35, 64, 0.30) 100%
+    rgba(24, 60, 32, 0.90) 45%,
+    rgba(24, 60, 32, 0.30) 100%
   );
 }
 
 /* Solid overlays — inner pages */
 .hero__overlay--85 {
-  background: rgba(12, 35, 64, 0.85);
+  background: rgba(24, 60, 32, 0.85);
 }
 
 .hero__overlay--80 {
-  background: rgba(12, 35, 64, 0.80);
+  background: rgba(24, 60, 32, 0.80);
 }
 
 
@@ -119,7 +146,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--leaf);
   margin-bottom: var(--md);
 }
 
@@ -136,7 +163,7 @@
   font-family: var(--font-head);
   font-size: clamp(18px, 2.5vw, 26px);
   font-weight: 700;
-  color: var(--teal);
+  color: var(--leaf);
   margin-bottom: var(--lg);
 }
 
@@ -182,7 +209,7 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border: 4px solid var(--teal);
+  border: 4px solid var(--leaf);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.40);
   display: block;
 }
@@ -224,7 +251,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--leaf);
 }
 
 .countdown__units {
@@ -263,7 +290,7 @@
   font-family: var(--font-head);
   font-size: 32px;
   font-weight: 700;
-  color: var(--teal);
+  color: var(--leaf);
   line-height: 1;
   padding-bottom: 18px;
 }
@@ -272,7 +299,7 @@
   font-family: var(--font-head);
   font-size: 22px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--leaf);
   letter-spacing: 0.05em;
 }
 
@@ -281,9 +308,9 @@
    TRUST BAR — below homepage hero
    ------------------------------------------------------------- */
 .trust-bar {
-  background-color: rgba(10, 110, 86, 0.10);
-  border-top: 1px solid rgba(10, 110, 86, 0.20);
-  border-bottom: 1px solid rgba(10, 110, 86, 0.20);
+  background-color: rgba(48, 108, 54, 0.10);
+  border-top: 1px solid rgba(48, 108, 54, 0.20);
+  border-bottom: 1px solid rgba(48, 108, 54, 0.20);
   padding: var(--lg) 0;
 }
 
@@ -348,11 +375,6 @@
     padding: var(--xl) 0;
   }
 
-  /* Re-anchor background image for taller mobile layout */
-  .hero--bg-banner {
-    background-position: center 20%;
-  }
-
   /* Stack two-column hero layouts on mobile */
   .hero__content--two-col,
   .hero__content--home,
@@ -400,17 +422,6 @@
 
   .hero__subtext {
     max-width: 100%;
-  }
-
-  /* Homepage mobile: show campaign poster instead of headshot circle */
-  .hero__headshot-circle--mobile-hide {
-    display: none;
-  }
-
-  .hero__poster--mobile-hero {
-    display: block;
-    max-width: 280px;
-    margin: 0 auto var(--lg);
   }
 
   /* Trust bar */

@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--navy);
+  background-color: var(--green-dark);
   box-shadow: var(--shadow-nav);
   height: 68px;
   display: flex;
@@ -28,7 +28,7 @@
 
 /* Elevated shadow once page has scrolled */
 .navbar--scrolled {
-  box-shadow: 0 4px 20px rgba(12, 35, 64, 0.30);
+  box-shadow: 0 4px 20px rgba(24, 60, 32, 0.30);
 }
 
 .navbar__inner {
@@ -64,17 +64,17 @@
 }
 
 .navbar__logo-text span {
-  color: var(--teal);
+  color: var(--leaf);
 }
 
 .navbar__logo-divider {
-  color: var(--gold);
+  color: var(--leaf);
   font-weight: 400;
   margin: 0 2px;
 }
 
 .navbar__logo:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 4px;
   border-radius: 3px;
 }
@@ -114,7 +114,7 @@
   left: 12px;
   right: 12px;
   height: 2px;
-  background-color: var(--teal);
+  background-color: var(--green);
   border-radius: 1px;
   transform: scaleX(0);
   transform-origin: left center;
@@ -137,11 +137,11 @@
 
 .navbar__links a.active::after {
   transform: scaleX(1);
-  background-color: var(--teal);
+  background-color: var(--green);
 }
 
 .navbar__links a:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 2px;
 }
 
@@ -155,15 +155,15 @@
   gap: 6px;
   padding: 9px 20px;
   margin-left: var(--sm);
-  background-color: var(--gold);
-  color: var(--white);
+  background-color: var(--leaf);
+  color: var(--green-dark);
   font-family: var(--font-head);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--radius-btn);
-  border: 2px solid var(--gold);
+  border: 2px solid var(--leaf);
   text-decoration: none;
   transition: background-color var(--transition),
               border-color var(--transition),
@@ -174,10 +174,10 @@
 }
 
 .navbar__donate:hover {
-  background-color: #a87d00;
-  border-color: #a87d00;
+  background-color: var(--leaf-hover);
+  border-color: var(--leaf-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(196, 146, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(163, 217, 119, 0.35);
 }
 
 .navbar__donate:focus-visible {
@@ -221,7 +221,7 @@
 }
 
 .navbar__hamburger:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 2px;
 }
 
@@ -258,7 +258,7 @@
   position: fixed;
   inset: 0;
   z-index: 999;
-  background-color: var(--navy);
+  background-color: var(--green-dark);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -284,7 +284,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(to right, var(--teal), var(--gold));
+  background: linear-gradient(to right, var(--green), var(--leaf));
 }
 
 
@@ -325,15 +325,15 @@
 
 .mobile-nav__links a:hover,
 .mobile-nav__links a:focus-visible {
-  color: var(--teal);
+  color: var(--green);
 }
 
 .mobile-nav__links a.active {
-  color: var(--teal);
+  color: var(--green);
 }
 
 .mobile-nav__links a:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 4px;
   border-radius: 3px;
 }
@@ -346,8 +346,8 @@
   gap: 8px;
   margin-top: var(--xl);
   padding: 16px 48px;
-  background-color: var(--gold);
-  color: var(--white);
+  background-color: var(--leaf);
+  color: var(--green-dark);
   font-family: var(--font-head);
   font-size: 16px;
   font-weight: 700;
@@ -361,7 +361,7 @@
 
 .mobile-nav__donate:hover,
 .mobile-nav__donate:focus-visible {
-  background-color: #a87d00;
+  background-color: var(--leaf-hover);
   transform: scale(1.02);
 }
 
@@ -392,7 +392,7 @@
 }
 
 .mobile-nav__footer .vote-date {
-  color: var(--gold);
+  color: var(--leaf);
   margin-top: 4px;
   font-size: 13px;
 }

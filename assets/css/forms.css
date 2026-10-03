@@ -44,7 +44,7 @@
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -87,8 +87,8 @@
 
 .form-control:focus {
   outline: none;
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(10, 110, 86, 0.12);
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(48, 108, 54, 0.12);
 }
 
 .form-control::placeholder {
@@ -142,7 +142,7 @@ select.form-control {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
   margin-bottom: var(--xs);
 }
 
@@ -162,7 +162,7 @@ select.form-control {
   cursor: pointer;
   flex-shrink: 0;
   margin-top: 2px;
-  accent-color: var(--teal);
+  accent-color: var(--green);
   appearance: auto;
   -webkit-appearance: auto;
 }
@@ -197,7 +197,7 @@ select.form-control {
   border: 2px solid var(--border);
   cursor: pointer;
   flex-shrink: 0;
-  accent-color: var(--teal);
+  accent-color: var(--green);
   appearance: auto;
   -webkit-appearance: auto;
 }
@@ -226,7 +226,7 @@ select.form-control {
 }
 
 .form-privacy a {
-  color: var(--teal);
+  color: var(--green);
   text-decoration: underline;
 }
 
@@ -241,9 +241,9 @@ select.form-control {
   gap: var(--md);
   text-align: center;
   padding: var(--2xl);
-  background-color: var(--ltteal);
+  background-color: var(--green-tint);
   border-radius: var(--radius-card);
-  border: 2px solid var(--teal);
+  border: 2px solid var(--green);
 }
 
 .form-success.is-visible {
@@ -258,7 +258,7 @@ select.form-control {
   font-family: var(--font-head);
   font-size: 24px;
   font-weight: 700;
-  color: var(--teal);
+  color: var(--green);
 }
 
 .form-success__body {

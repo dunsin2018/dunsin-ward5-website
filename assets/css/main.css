@@ -14,19 +14,22 @@
    DESIGN TOKENS — CSS CUSTOM PROPERTIES
    ------------------------------------------------------------- */
 :root {
-  /* Colours */
-  --navy:      #0C2340;
-  --royal:     #1A4FA0;
-  --teal:      #0A6E56;
-  --gold:      #C49200;
-  --white:     #FFFFFF;
-  --light-bg:  #F5F5F5;
-  --body-text: #2C2C2C;
-  --muted:     #666666;
-  --border:    #CCCCCC;
-  --error:     #9B1C1C;
-  --ltteal:    #D1EDE6;
-  --ltblue:    #D6E4F7;
+  /* Colours — sampled from the official campaign banner */
+  --green-dark:  #183C20;   /* "DUNSIN" wordmark — headings, dark sections */
+  --green-mid:   #32733B;   /* "FAKOREDE" wordmark */
+  --green:       #306C36;   /* URL pill — primary buttons, links, labels */
+  --green-hover: #24532A;
+  --green-bright:#2E7D32;   /* accent text on light backgrounds */
+  --leaf:        #A3D977;   /* accent on dark backgrounds, donate buttons */
+  --leaf-hover:  #8CC65E;
+  --white:       #FFFFFF;
+  --light-bg:    #F3F8F3;
+  --body-text:   #1F2A21;
+  --muted:       #5E6B60;
+  --border:      #C9D6CB;
+  --error:       #9B1C1C;
+  --green-tint:  #DCEEDD;
+  --green-pale:  #EEF6EE;
 
   /* Typography */
   --font-head:  'Montserrat', 'Arial Black', sans-serif;
@@ -48,9 +51,9 @@
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-card: 0 2px 12px rgba(12, 35, 64, 0.10);
-  --shadow-btn:  0 4px 16px rgba(10, 110, 86, 0.20);
-  --shadow-nav:  0 2px  8px rgba(12, 35, 64, 0.15);
+  --shadow-card: 0 2px 12px rgba(24, 60, 32, 0.10);
+  --shadow-btn:  0 4px 16px rgba(48, 108, 54, 0.20);
+  --shadow-nav:  0 2px  8px rgba(24, 60, 32, 0.15);
 
   /* Transitions */
   --transition: 0.22s ease;
@@ -130,12 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1 {
   font-size: clamp(36px, 5vw, 52px);
   font-weight: 900;
-  color: var(--navy);
+  color: var(--green-dark);
 }
 
 /* On dark backgrounds, override via parent class */
-.bg-navy h1,
-.bg-navy .h1,
+.bg-green-dark h1,
+.bg-green-dark .h1,
 .hero h1,
 .hero .h1 {
   color: var(--white);
@@ -144,20 +147,20 @@ h1, .h1 {
 h2, .h2 {
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--green-dark);
 }
 
 h3, .h3 {
   font-size: clamp(20px, 2.5vw, 26px);
   font-weight: 700;
-  color: var(--teal);
+  color: var(--green);
 }
 
 h4, .h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: var(--font-body);
-  color: var(--navy);
+  color: var(--green-dark);
 }
 
 p {
@@ -184,7 +187,7 @@ small,
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--green);
   margin-bottom: var(--sm);
 }
 
@@ -204,20 +207,29 @@ small,
   color: var(--white);
 }
 
+/* Labels and green text on dark-green or green backgrounds */
+.bg-green-dark .label,
+.bg-green .label,
+.cta-strip .label,
+.split-cta .label,
+.hero .label {
+  color: var(--leaf);
+}
+
 .text-white-70 {
   color: rgba(255, 255, 255, 0.70);
 }
 
-.text-teal {
-  color: var(--teal);
+.text-green {
+  color: var(--green);
 }
 
-.text-gold {
-  color: var(--gold);
+.text-leaf {
+  color: var(--leaf);
 }
 
-.text-navy {
-  color: var(--navy);
+.text-green-dark {
+  color: var(--green-dark);
 }
 
 .text-center { text-align: center; }
@@ -261,8 +273,8 @@ small,
 }
 
 /* Background helpers */
-.bg-navy    { background-color: var(--navy); }
-.bg-teal    { background-color: var(--teal); }
+.bg-green-dark    { background-color: var(--green-dark); }
+.bg-green    { background-color: var(--green); }
 .bg-light   { background-color: var(--light-bg); }
 .bg-white   { background-color: var(--white); }
 
@@ -299,17 +311,17 @@ small,
 
 /* Primary — teal fill */
 .btn--primary {
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
-  border-color: var(--teal);
+  border-color: var(--green);
   box-shadow: var(--shadow-btn);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  background-color: #085c48;
-  border-color: #085c48;
-  box-shadow: 0 6px 20px rgba(10, 110, 86, 0.35);
+  background-color: var(--green-hover);
+  border-color: var(--green-hover);
+  box-shadow: 0 6px 20px rgba(48, 108, 54, 0.35);
 }
 
 /* Outline — white border, transparent fill (for dark backgrounds) */
@@ -322,46 +334,46 @@ small,
 .btn--outline:hover,
 .btn--outline:focus-visible {
   background-color: var(--white);
-  color: var(--navy);
+  color: var(--green-dark);
 }
 
 /* Outline navy — for light backgrounds */
-.btn--outline-navy {
+.btn--outline-green-dark {
   background-color: transparent;
-  color: var(--navy);
-  border-color: var(--navy);
+  color: var(--green-dark);
+  border-color: var(--green-dark);
 }
 
-.btn--outline-navy:hover,
-.btn--outline-navy:focus-visible {
-  background-color: var(--navy);
+.btn--outline-green-dark:hover,
+.btn--outline-green-dark:focus-visible {
+  background-color: var(--green-dark);
   color: var(--white);
 }
 
 /* Gold */
-.btn--gold {
-  background-color: var(--gold);
-  color: var(--white);
-  border-color: var(--gold);
-  box-shadow: 0 4px 16px rgba(196, 146, 0, 0.25);
+.btn--leaf {
+  background-color: var(--leaf);
+  color: var(--green-dark);
+  border-color: var(--leaf);
+  box-shadow: 0 4px 16px rgba(163, 217, 119, 0.25);
 }
 
-.btn--gold:hover,
-.btn--gold:focus-visible {
-  background-color: #a87d00;
-  border-color: #a87d00;
+.btn--leaf:hover,
+.btn--leaf:focus-visible {
+  background-color: var(--leaf-hover);
+  border-color: var(--leaf-hover);
 }
 
 /* Teal outline (on light bg) */
-.btn--outline-teal {
+.btn--outline-green {
   background-color: transparent;
-  color: var(--teal);
-  border-color: var(--teal);
+  color: var(--green);
+  border-color: var(--green);
 }
 
-.btn--outline-teal:hover,
-.btn--outline-teal:focus-visible {
-  background-color: var(--teal);
+.btn--outline-green:hover,
+.btn--outline-green:focus-visible {
+  background-color: var(--green);
   color: var(--white);
 }
 
@@ -407,19 +419,19 @@ small,
   text-transform: uppercase;
 }
 
-.stat-pill--teal {
-  background-color: var(--ltteal);
-  color: var(--teal);
+.stat-pill--green {
+  background-color: var(--green-tint);
+  color: var(--green);
 }
 
-.stat-pill--gold {
-  background-color: #fdf3d0;
-  color: #7a5900;
+.stat-pill--leaf {
+  background-color: var(--green-pale);
+  color: var(--green-dark);
 }
 
-.stat-pill--navy {
-  background-color: var(--ltblue);
-  color: var(--navy);
+.stat-pill--green-dark {
+  background-color: var(--green-pale);
+  color: var(--green-dark);
 }
 
 
@@ -435,16 +447,16 @@ small,
 }
 
 .card:hover {
-  box-shadow: 0 8px 32px rgba(12, 35, 64, 0.15);
+  box-shadow: 0 8px 32px rgba(24, 60, 32, 0.15);
   transform: translateY(-2px);
 }
 
-.card--teal-border {
-  border-left: 4px solid var(--teal);
+.card--green-border {
+  border-left: 4px solid var(--green);
 }
 
 .card--top-border {
-  border-top: 3px solid var(--teal);
+  border-top: 3px solid var(--green);
 }
 
 
@@ -455,13 +467,13 @@ small,
   display: block;
   width: 48px;
   height: 4px;
-  background-color: var(--teal);
+  background-color: var(--green);
   border-radius: 2px;
   margin-bottom: var(--md);
 }
 
-.accent-bar--gold {
-  background-color: var(--gold);
+.accent-bar--leaf {
+  background-color: var(--leaf);
 }
 
 .accent-bar--center {
@@ -485,7 +497,7 @@ hr {
   left: var(--md);
   z-index: 9999;
   padding: 10px 20px;
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
   font-family: var(--font-body);
   font-size: 15px;
@@ -497,7 +509,7 @@ hr {
 
 .skip-link:focus {
   top: 0;
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 2px;
 }
 
@@ -515,10 +527,10 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(12, 35, 64, 0.25);
+  box-shadow: 0 4px 16px rgba(24, 60, 32, 0.25);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition), transform var(--transition);
@@ -534,12 +546,12 @@ hr {
 }
 
 .back-to-top:hover {
-  background-color: #085c48;
+  background-color: var(--green-hover);
   transform: translateY(-3px);
 }
 
 .back-to-top:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 3px;
 }
 
@@ -553,7 +565,7 @@ hr {
   left: 0;
   right: 0;
   z-index: 900;
-  background-color: var(--navy);
+  background-color: var(--green-dark);
   color: var(--white);
   padding: var(--md) var(--lg);
   display: flex;
@@ -561,7 +573,7 @@ hr {
   justify-content: space-between;
   gap: var(--md);
   font-size: 14px;
-  box-shadow: 0 -2px 12px rgba(12, 35, 64, 0.20);
+  box-shadow: 0 -2px 12px rgba(24, 60, 32, 0.20);
 }
 
 #cookie-banner p {
@@ -571,7 +583,7 @@ hr {
 }
 
 #cookie-banner a {
-  color: var(--gold);
+  color: var(--leaf);
   text-decoration: underline;
 }
 
@@ -586,7 +598,7 @@ hr {
   left: 0;
   right: 0;
   z-index: 1100;
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
   padding: var(--sm) var(--md);
   text-align: center;
@@ -617,14 +629,14 @@ hr {
    FOCUS STYLES — ACCESSIBILITY
    ------------------------------------------------------------- */
 :focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--leaf);
   outline-offset: 3px;
 }
 
@@ -633,7 +645,7 @@ button:focus-visible {
    SELECTION COLOUR
    ------------------------------------------------------------- */
 ::selection {
-  background-color: var(--teal);
+  background-color: var(--green);
   color: var(--white);
 }
 

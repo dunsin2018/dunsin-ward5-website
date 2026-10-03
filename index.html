@@ -92,6 +92,17 @@
 
   <main id="main-content">
 
+    <!-- Campaign banner -->
+    <div class="page-banner">
+      <img
+        src="assets/images/banner.jpg"
+        srcset="assets/images/banner-768.jpg 768w, assets/images/banner-1200.jpg 1200w, assets/images/banner.jpg 2003w"
+        sizes="100vw"
+        alt="Dunsin Fakorede for City Councillor — Ward 5, Grantham"
+        class="page-banner__img"
+        width="2003" height="771">
+    </div>
+
     <!-- ═══════════════════════════════════════════════════════════
          HERO SECTION
          ═══════════════════════════════════════════════════════════ -->
@@ -150,17 +161,12 @@
               </div>
             </div>
 
-            <!-- Right column: headshot (desktop) / campaign poster (mobile) -->
+            <!-- Right column: headshot -->
             <div class="hero__image-col">
               <img
-                src="assets/images/campaign-poster.png"
-                alt="Dunsin Fakorede — Ward 5 City Councillor campaign poster"
-                class="hero__poster hero__poster--mobile-hero"
-                width="280">
-              <img
-                src="assets/images/headshot-navy.png"
+                src="assets/images/headshot-square.jpg"
                 alt="Dunsin Fakorede — Ward 5 City Councillor candidate"
-                class="hero__headshot-circle hero__headshot-circle--mobile-hide"
+                class="hero__headshot-circle"
                 width="420" height="420">
             </div>
 
@@ -171,9 +177,9 @@
 
     <!-- ═══════════════════════════════════════════════════════════
          TRUST BAR — four campaign pillars
-         Wrapped in bg-navy so rgba teal tint reads correctly
+         Wrapped in bg-green-dark so rgba teal tint reads correctly
          ═══════════════════════════════════════════════════════════ -->
-    <div class="bg-navy">
+    <div class="bg-green-dark">
       <div class="trust-bar">
         <div class="container">
           <div class="trust-bar__inner">
@@ -301,7 +307,7 @@
               property standards, and housing vote.
             </p>
             <div class="issue-card__stat">
-              <span class="stat-pill stat-pill--teal">25.7% rent premium · CMHC 2024</span>
+              <span class="stat-pill stat-pill--green">25.7% rent premium · CMHC 2024</span>
             </div>
           </article>
 
@@ -315,7 +321,7 @@
               safety issue, not a convenience issue.
             </p>
             <div class="issue-card__stat">
-              <span class="stat-pill stat-pill--teal">23.3% seniors · Statistics Canada 2021</span>
+              <span class="stat-pill stat-pill--green">23.3% seniors · Statistics Canada 2021</span>
             </div>
           </article>
 
@@ -328,7 +334,7 @@
               shows up at planning tables and ensures our ward's voice is heard.
             </p>
             <div class="issue-card__stat">
-              <span class="stat-pill stat-pill--gold">$400,000 cultural grants · SCCIP 2025</span>
+              <span class="stat-pill stat-pill--leaf">$400,000 cultural grants · SCCIP 2025</span>
             </div>
           </article>
 
@@ -355,7 +361,7 @@
 
           <div class="two-col-section__image">
             <img
-              src="assets/images/headshot-warm.png"
+              src="assets/images/headshot.jpg"
               alt="Dunsin Fakorede — Ward 5 neighbour and community leader"
               class="two-col-section__photo two-col-section__photo--warm"
               width="480" loading="lazy">
@@ -393,10 +399,10 @@
 
     <!-- ═══════════════════════════════════════════════════════════
          SECTION 3 — COMMUNITY SNAPSHOT
-         Background: --navy
+         Background: --green-dark
          3 photo placeholders — update when real event photos available
          ═══════════════════════════════════════════════════════════ -->
-    <section class="community-snapshot bg-navy" id="community-snapshot">
+    <section class="community-snapshot bg-green-dark" id="community-snapshot">
       <div class="container">
 
         <div class="section-header reveal">
@@ -559,7 +565,7 @@
 
     <!-- ═══════════════════════════════════════════════════════════
          SECTION 4 — KEY STATS BAR
-         Background: --navy
+         Background: --green-dark
          ═══════════════════════════════════════════════════════════ -->
     <div class="stats-bar" aria-label="Key campaign statistics">
       <div class="container">
@@ -592,11 +598,11 @@
 
     <!-- ═══════════════════════════════════════════════════════════
          SECTION 5 — VOLUNTEER / DONATE SPLIT
-         Left: teal (#0A6E56) · Right: navy (#0C2340)
+         Left: green (--green) · Right: dark green (--green-dark)
          ═══════════════════════════════════════════════════════════ -->
     <div class="split-cta" aria-label="Get involved or donate">
 
-      <div class="split-cta__panel split-cta__panel--teal">
+      <div class="split-cta__panel split-cta__panel--green">
         <h2 class="split-cta__title">Volunteer With Us</h2>
         <p class="split-cta__body">
           Every door knocked and every conversation counts.
@@ -607,13 +613,13 @@
         </a>
       </div>
 
-      <div class="split-cta__panel split-cta__panel--navy">
+      <div class="split-cta__panel split-cta__panel--green-dark">
         <h2 class="split-cta__title">Support the Campaign</h2>
         <p class="split-cta__body">
           Help us reach every door in Ward 5. Your contribution
           funds canvassing, lawn signs, and community outreach.
         </p>
-        <a href="donate.html" class="btn btn--gold">
+        <a href="donate.html" class="btn btn--leaf">
           Donate <span class="arrow">→</span>
         </a>
       </div>
@@ -653,7 +659,7 @@
     <!-- ═══════════════════════════════════════════════════════════
          SECTION 7 — INSTAGRAM PLACEHOLDER GRID
          Background: --light-bg
-         Image 1: ASSET B (campaign-poster.jpeg)
+         Image 1: campaign banner
          Images 2–6: placeholders until live feed connects
          ═══════════════════════════════════════════════════════════ -->
     <section class="instagram-section" id="instagram">
@@ -665,8 +671,8 @@
 
           <div class="instagram-grid__item">
             <img
-              src="assets/images/campaign-poster.png"
-              alt="Dunsin Fakorede — Ward 5 Councillor campaign poster"
+              src="assets/images/banner-768.jpg"
+              alt="Dunsin Fakorede for City Councillor — Ward 5, Grantham"
               loading="lazy">
           </div>
           <div class="instagram-grid__item">
@@ -688,7 +694,7 @@
         </div>
 
         <a href="https://www.instagram.com/dunsinsf4stc_councillor?igsh=MW0xd2ZyOTN4ZHZvYQ%3D%3D&amp;utm_source=qr"
-           class="btn btn--outline-navy"
+           class="btn btn--outline-green-dark"
            target="_blank"
            rel="noopener noreferrer">
           Follow on Instagram <span class="arrow">→</span>
@@ -703,7 +709,7 @@
     <div class="footer__main">
       <div class="container">
         <div class="footer__brand">
-          <img src="assets/images/headshot-navy.png" alt="Dunsin Fakorede" class="footer__headshot" width="60" height="60">
+          <img src="assets/images/headshot-160.jpg" alt="Dunsin Fakorede" class="footer__headshot" width="60" height="60">
           <div>
             <p class="footer__candidate">Dunsin Fakorede · Ward 5 Grantham</p>
             <p class="footer__slogan">Together for a Better Ward 5. Building a Stronger Ward 5.</p>
