@@ -1179,3 +1179,9 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.instagram-grid__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
