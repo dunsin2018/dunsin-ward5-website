@@ -86,7 +86,9 @@
       if (!target) return;
       e.preventDefault();
       const navHeight = 68;
-      const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      const bannerEl = document.getElementById('election-banner');
+      const bannerHeight = (bannerEl && bannerEl.style.display === 'flex') ? bannerEl.offsetHeight : 0;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - bannerHeight - 16;
       window.scrollTo({ top: targetTop, behavior: 'smooth' });
     });
   });
